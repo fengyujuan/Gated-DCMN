@@ -9,13 +9,16 @@ This package has the following requirements:
 * keras 2.2.4
 * [TensorFlow 1.4](https://github.com/tensorflow/tensorflow)
 * scikit-learn 0.18.2
-## Usage
 
+## Usage
 ### How to Run
-To run Gated-DCMN on your data, you need to: (1)change the function of loading data in load_data.py; (2) Set hyperparameters for Gated-DCMN in run_gated_dcmn.sh; (3) run the shell script run_gated_dcmn.sh
+To run Gated-DCMN on your data, you need to: 
+
+(1)Change the function of loading data in load_data.py; (2) Set hyperparameters for Gated-DCMN in run_gated_dcmn.sh; (3) Run the shell script run_gated_dcmn.sh
 
 Notes: To train the Gated-DCMN model with the public MIMIC-III database, four source data files should be prepared, 
 Three types of features including clincial static information, clinical time-variant information and ECG signal need to be preprocessed, represented and then saved into three h5py files. All the h5file contains feature-vector indexed by ‘icustay_id’. There are:
+
 (a)	Label information: labels.csv. Each stay is represented with a ‘int’ to indicate die in prediction window or not.
 (b)	Clinical static information: static_h5file. Each stay is represented with a 139-dimensional vector to summarize time-invariant features including Gender, Ethnicity, Age, Los and Diagnoses. The categorical variable is one-hot encoded.
 (c)	Clinical time-variant information: clinical_discretizer_2h_h5file: each stay is represented with a matrix of shape (24,76). We divide data collection window (DCW=24-h) into 24 timesteps with timestep-window set as 1-h. Within each timestep, we impute missing values and calculate the last value. We also add masking values to indicate whether channel is missing or not.
