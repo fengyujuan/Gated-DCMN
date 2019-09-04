@@ -1,5 +1,5 @@
 # Gated-DCMN
-This repository contains Keras Code implementation of Gated Double-core Memory Network (Gated-DCMN) for multi-modal data learning in healthcare. For details about the model architecuture you can access our work: DCMN: Double Core Memory Network for PatientOutcome Prediction with Multimodal Data.
+This repository contains Keras Code implementation of Gated Double-core Memory Network (Gated-DCMN) for multi-modal data learning in healthcare. For details about the model architecuture you can access our work: **DCMN: Double Core Memory Network for PatientOutcome Prediction with Multimodal Data**.
 
 
 ## Requirements
